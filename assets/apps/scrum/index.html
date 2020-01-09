@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<meta charset="UTF-8">
+	<!-- Semantic UI -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/scrum.css">
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<!-- FA5 -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+	<h1>&mdash; S c r u m  &mdash;</h1>
+	<hr>
+
+	<div id="container" class="yesterday_container">
+		<h2>Y e s t e r d a y</h2>
+		<input type="text" placeholder="Yesterday I Did..">
+
+		<ul class="yesterday_ul">
+		</ul>
+	</div>
+
+	<div id="container" class="today_container">
+		<h2>T o d a y</h2>
+		<input type="text" placeholder="Today I Will Do..">
+
+		<ul class="today_ul">
+		</ul>
+	</div>
+
+	<div id="container" class="tomorrow_container">
+		<h2>T o m o r r o w</h2>
+		<input type="text" placeholder="Tomorrow I Plan On Doing..">
+
+		<ul class="tomorrow_ul">
+		</ul>
+	</div>
+
+	<div id="container" class="blocked_container">
+		<h2>B l o c k e d</h2>
+		<input type="text" placeholder="I Am Blocked On..">
+
+		<ul class="blocked_ul">
+		</ul>
+	</div>
+
+	<div id="container" class="TIL_container">
+		<h2>T I L</h2>
+		<input type="text" placeholder="Today I Learned..">
+
+		<ul class="TIL_ul">
+		</ul>
+	</div>
+
+	<div id="container" class="AOB_container">
+		<h2>A O B</h2>
+		<input type="text" placeholder="Any Other Business..">
+
+		<ul class="AOB_ul">
+		</ul>
+	</div>
+
+	<div class="button_container">
+		<button class="ui inverted blue button themeButton">Theme</button>
+		<button class="ui inverted green button collapseButton">Collapse</button>
+		<button class="ui inverted purple button moveButton">Next Day</button>
+		<button class="ui inverted red button resetButton">Reset</button>
+	</div>
+
+	<div>
+		<p id="footer">v0.12 &mdash; MBO &mdash; 2018</p>
+	</div>
+
+	<!-- JS -->
+	<script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/scrum.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: Montserrat;
+	font-size: 0.9em;
+	color: #dfdfdf;
+	background-color: #141414;
+}
+
+h1 {
+	font-size: calc(15px + 3.5vw);
+	font-weight: 700;
+	color: white;
+}
+
+h2 {
+	font-size: calc(15px + 1vw);
+	font-weight: 200;
+	color: white;
+}
+
+h3 {
+	font-size: calc(15px + 1vw);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	width: 400px;
+	max-width: 90% /*Fix for mobiles*/
+}
+
+iframe {
+	max-width: 100%;
+	border-radius: 10px;
+	padding-bottom: 20px;
+}
+
+.nav-link {
+	font-size: 1.1em;
+}
+
+.nav-item {
+	padding-right: 10px;
+}
+
+.bg-dark-custom {
+	background-color: #141414;
+}
+
+.bg-image, .bg-image-2, .bg-image-3, .bg-image-4, .bg-image-5, .bg-image-6 {
+	min-height: 100%;
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg-image {
+	background-image: url("../../assets/img/triple_bg.png");
+	/*background-image: url("../../assets/img/parallax_one.png");
+*/	min-height: 100%;
+}
+
+.bg-image-2 {
+	background-image: url("../../assets/img/parallax_two.jpg");
+	min-height: 500px;
+}
+
+.bg-image-3 {
+	background-image: url("../../assets/img/parallax_three.jpg");
+	min-height: 500px;
+}
+
+.bg-image-4 {
+	background-image: url("../../assets/img/parallax_four.jpg");
+	min-height: 500px;
+}
+
+.bg-image-5 {
+	background-image: url("../../assets/img/parallax_five.jpg");
+	min-height: 500px;
+}
+
+.bg-image-6 {
+	background-image: url("../../assets/img/parallax_six.png");
+	min-height: 500px;
+}
+
+.a1 {
+	font-weight: 900;
+}
+
+.fas {
+	font-size: 2em;
+}
+
+.fab {
+	font-size: 2em;
+}
+
+.row {
+	margin: 0;
+}
+
+.corners {
+	border-radius: 10px;
+	width: 128px;
+	height: 128px;
+}
+
+.titlecontainer {
+	position: absolute;
+	left: 0;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.6), 0px 8px 13px rgba(0,0,0,0.2), 0px 18px 23px rgba(0,0,0,0.2);
+}
+
+.highlight {
+	color: #2984bc;
+}
+
+.padtopbot {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.padtopbotsmall {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.welcomecontainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.gamescontainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.newscontainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.teamcontainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.joincontainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.contentleftflex {
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+
+.paddingleft {
+	padding-left: 20px;
+}
+
+.teamnames {
+	padding-left: 20px;
+	font-size: calc(10px + 1vw);
+}
+
+.caption {
+	font: "Lato";
+	font-size: 25px;
+  	position: absolute;
+  	left: 0;
+  	top: 50%;
+  	width: 100%;
+  	text-align: center;
+  	text-shadow: 0px 4px 3px rgba(0,0,0,0.8), 0px 8px 13px rgba(0,0,0,0.4), 0px 18px 23px rgba(0,0,0,0.2);
+}
+
+.initiallyhidden {
+	display: none;
+}
+
+.btn-custom {
+	color: black;
+}
+
+.linkcolour{
+	color: inherit;
+	text-decoration: none;
+}
+
+.linkcolour:hover {
+	color: #2984bc;
+	text-decoration: none;
+}
+
+.hover-enlarge-text i {
+	-webkit-transition: font-size 0.5s; /* For Safari 3.1 to 6.0 */
+	transition:font-size 0.5s;
+	font-size: 2em;
+}
+
+.hover-enlarge-text:hover i {
+	font-size: 2.6em;
+}
+
+.footer {
+	opacity: 0;
+	transition: all 0.5s ease-out;
+}
+
+.bg-image-6:hover .footer{
+	opacity: 1;
+	transition: all 1s ease;
+}
+
+#a1title {
+	font-weight: 700;
+}
+
+#arklogo {
+	display: block;
+	margin: auto;
+	max-width: 50%;
+}
+
+#gamebanner {
+	width: 100%;
+	max-width: 420px;
+	border-radius: 10px;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+@media (min-width: 1200px) {
+	.welcomecontainer, .gamescontainer, .newscontainer, .teamcontainer, .joincontainer {
+	    width: 1200px;
+	}
+}
+
+/* For viewing parallax images on mobile as static backgrounds */
+@media only screen and (max-device-width: 1024px) {
+    .bg-image, .bg-image-2, .bg-image-3, .bg-image-4, .bg-image-5, .bg-image-6 {
+        background-attachment: inherit;
+        min-width: 100%;
+        background-size: unset;
+        background-position: center;
+    }
+}

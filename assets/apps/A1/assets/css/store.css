@@ -1,0 +1,141 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: Montserrat;
+	font-size: 0.9em;
+	color: #dfdfdf;
+	background-color: #141414;
+	padding-top: 30px;
+}
+
+h3 {
+	font-size: calc(15px + 1vw);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	width: 800px;
+	max-width: 90% /*Fix for mobiles*/
+}
+
+.navbar {
+	background-color: #141414;
+}
+
+.nav-link {
+	font-size: 1.1em;
+}
+
+.nav-item {
+	padding-right: 10px;
+}
+
+.merchcontainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.servercontainer {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.lightbg {
+	background-color: #202020;
+}
+
+.highlight {
+	color: #2984bc;
+}
+
+.card-img-top {
+	padding: 2px;
+	max-height: 250px;
+}
+
+.card {
+	margin-top: 15px;
+}
+
+.paypalForm {
+	text-align: center;
+	display: block;
+	margin-top: -10px;
+}
+
+.announcement {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#a1title {
+	font-weight: 700;
+}
+
+#merchName {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+/*-------------ANNOUNCEMENT BAR--------------*/
+.m-red {
+	background:#E54556; 
+	color:#fff; 
+	text-decoration:none;
+}
+
+.m-bar {
+	max-width:90%; 
+	height:55px;
+	display:inline-block; 
+	margin-top:20px; 
+	border-radius: 10px;
+}
+
+.m-bar a.m-close {
+	float:right; 
+	display:inline-block; 
+	color:#fff; 
+	text-decoration:none; 
+	overflow:hidden; 
+	margin-right:10px;
+}
+
+.m-bar a.m-close i {
+	padding-left: 10px;
+	margin-top:15px;
+}
+
+.m-bar a.m-microphone {
+	float:left;  
+	margin-top:15px; 
+	margin-left:10px; 
+	cursor:default;
+}
+
+.m-bar a.m-content {
+	font-size:13.5px; 
+	font-family:"Noto Sans", sans-serif; 
+	margin-left:5px; 
+	line-height:54px; 
+	display:inline-block;
+}

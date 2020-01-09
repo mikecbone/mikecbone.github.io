@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gaming Community</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.css">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/store.css">
+	<!-- FavIcon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
+	<link rel="manifest" href="/assets/fav/site.webmanifest">
+	<link rel="mask-icon" href="/assets/fav/safari-pinned-tab.svg" color="#9515d1">
+	<link rel="shortcut icon" href="/assets/fav/favicon.ico">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="/assets/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<!-- ANNOUNCEMENT BAR -->
+	<center>
+	 	<div class="m-bar m-red">
+	    	<a class="m-microphone"><i class="fas fa-exclamation" style="font-size:26px"></i></a>
+	    	<a class="m-content announcement">Opening Sale with 20% off! &mdash; US Residents Only &mdash; Contact Steel for multiple item shipping cost discount</a>
+	    	<a class="m-close" href="#"><i class="fas fa-times-circle" style="font-size:26px"></i></a>
+	  	</div> 
+	</center>
+	<!-- NAV BAR -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top"">
+		<div class="container">
+			<a class="navbar-brand" href="index.html"><span id="a1title">[A1] Gaming Community</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   				<span class="navbar-toggler-icon"></span>
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    		<ul class="navbar-nav mr-auto">
+		      	</ul>
+		      	<ul class="navbar-nav navbar-right">
+		      		<li class="nav-item"><span id="welcome"><a class="nav-link" href="/index.html">Welcome</a></span></li>
+		      		<li class="nav-item"><span id="games"><a class="nav-link" href="/index.html">Games</a></span></li>
+		      		<li class="nav-item"><span id="news"><a class="nav-link" href="/index.html">News</a></span></li>
+		      		<li class="nav-item"><span id="team"><a class="nav-link" href="/index.html">The Team</a></span></li>
+		      		<li class="nav-item"><span id="join"><a class="nav-link" href="/index.html">Links</a></span></li>
+		      		<!-- <li class="nav-item"><span id="separator"><a style="cursor: default;" class="nav-link" href="#/">|</a></span></li>
+
+		      		<div class="my-auto">
+			      		<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+				      		<input type="hidden" name="cmd" value="_s-xclick">
+				      		<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+				      		">
+				      		<input type="image" src="assets/img/cartButton.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!" width="68" height="32">
+				      		<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+			      		</form>
+			      	</div> -->
+		      	</ul>
+  			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class="merchcontainer">
+			<h3><span class="highlight">Our</span> Merchandise</h3>
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<p>Initially US Residents Only</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="card text-white bg-dark mb-3">
+					<a href="assets/img/store/printedT.png" target="_blank"><img class="card-img-top" src="assets/img/store/printedT.png"></a>
+				</div>
+				<div class="paypalForm">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="9DFD5HDUMQBSS">
+						<table>
+							<tr><td><input type="hidden" name="on0" value="Sizes"><span id="merchName">Graphic T</span></td></tr><tr><td><select name="os0">
+					    	<option value="Small">Small &dollar;18.00 USD</option>
+					    	<option value="Medium">Medium &dollar;18.00 USD</option>
+					    	<option value="Large">Large &dollar;18.00 USD</option>
+					    	<option value="XL">XL &dollar;18.00 USD</option>
+					    	<option value="2XL">2XL &dollar;20.00 USD</option>
+					    	<option value="3XL">3XL &dollar;21.00 USD</option>
+							</select> </td></tr>
+							<tr><td><input type="hidden" name="on1" value="Discord Username">Discord Username</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+						</table>
+						<input type="hidden" name="currency_code" value="USD">
+						<input type="image" src="assets/img/addToCartButton.png" border="0" name="submit" alt="PayPal">
+					</form>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="card text-white bg-dark mb-3">
+					<img class="card-img-top" src="assets/img/store/logos.png">
+				</div>
+				<div class="paypalForm">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="Y9A882QVMP85W">
+						<table>
+							<tr><td><input type="hidden" name="on0" value="Sizes"><span id="merchName">Logo Polo</span></td></tr><tr><td><select name="os0">
+						    <option value="Small">Small &dollar;22.00 USD</option>
+						    <option value="Medium">Medium &dollar;22.00 USD</option>
+						    <option value="Large">Large &dollar;22.00 USD</option>
+						    <option value="XL">XL &dollar;22.00 USD</option>
+						    <option value="2XL">2XL &dollar;24.00 USD</option>
+						    <option value="3XL">3XL &dollar;25.00 USD</option>
+						    <option value="4XL">4XL &dollar;25.00 USD</option>
+						    <option value="5XL">5XL &dollar;25.00 USD</option>
+							</select> </td></tr>
+							<tr><td><input type="hidden" name="on1" value="Discord Username">Discord Username</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+						</table>
+						<input type="hidden" name="currency_code" value="USD">
+						<input type="image" src="assets/img/addToCartButton.png" border="0" name="submit" alt="PayPal">
+					</form>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="card text-white bg-dark mb-3">
+					<img class="card-img-top" src="assets/img/store/mug.jpg">
+				</div>
+				<div class="paypalForm">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="G8VW9LHR2A546">
+						<table>
+							<tr><td><input type="hidden" name="on0" value="Choose Your Option"><span id="merchName">Logo Mug</span></td></tr><tr><td><select name="os0">
+						    <option value="Ark Style Logo">Ark Style Logo &dollar;20.00 USD</option>
+						    <option value="Conan Style Logo">Conan Style Logo &dollar;20.00 USD</option>
+						    <option value="Special Graphic">Special Graphic &dollar;25.00 USD</option>
+							</select> </td></tr>
+							<tr><td><input type="hidden" name="on1" value="Discord Username">Discord Username</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+						</table>
+						<input type="hidden" name="currency_code" value="USD">
+						<input type="image" src="assets/img/addToCartButton.png" border="0" name="submit" alt="PayPal">
+					</form>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="card text-white bg-dark mb-3">
+					<img class="card-img-top" src="assets/img/comingSoon.png">
+				</div>
+				<div class="paypalForm">
+					<p>More coming soon!</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="card text-white bg-dark mb-3">
+					<img class="card-img-top" src="assets/img/store/cap.jpg">
+				</div>
+				<div class="paypalForm">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="G8VW9LHR2A546">
+						<table>
+							<tr><td><input type="hidden" name="on0" value="Choose Your Option"><span id="merchName">Logo Baseball Cap</span></td></tr><tr><td><select name="os0">
+						    <option value="Ark Style Logo">Ark Style Logo &dollar;20.00 USD</option>
+						    <option value="Conan Style Logo">Conan Style Logo &dollar;20.00 USD</option>
+						    <option value="Special Graphic">Special Graphic &dollar;25.00 USD</option>
+							</select> </td></tr>
+							<tr><td><input type="hidden" name="on1" value="Discord Username">Discord Username</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+						</table>
+						<input type="hidden" name="currency_code" value="USD">
+						<input type="image" src="assets/img/addToCartButton.png" border="0" name="submit" alt="PayPal">
+					</form>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-sm-6 col-xs-12">
+				<div class="card text-white bg-dark mb-3">
+					<img class="card-img-top" src="assets/img/comingSoon.png">
+				</div>
+				<div class="paypalForm">
+					<p>More coming soon!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="lightbg">
+		<div class="servercontainer">
+			<h3><span class="highlight">Our</span> Servers</h3>
+			<div class="row">
+				<div class="col-lg-8 col-md-10 mx-auto">
+					<p>Coming Soon!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/lib/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="assets/js/lib/jquery-ui.js"></script>
+	<script type="text/javascript" src="assets/js/lib/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/js/store.js"></script>
+</body>
+</html>

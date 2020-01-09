@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patatap Clone</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<!-- Howl.js -->
+	<script type="text/javascript" src="assets/js/lib/howler.js"></script>
+	<!-- Paper.js -->
+	<script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+	<!-- Script -->
+	<script type="text/paperscript" canvas="myCanvas">
+		//Array to keep track of all shapes being used on the screen
+		var shapes = [];
+		//All the possible pressed key combos and their sound locations
+		var keyData = {
+			a: {
+				color: "#60b047",
+				sound: new Howl({
+				  src: ['assets/sounds/splits2.mp3']
+				})
+			},
+			b: {
+				color: "#e36690",
+				sound: new Howl({
+				  src: ['assets/sounds/clay.mp3']
+				})
+			},
+			c: {
+				color: "#3c20f6",
+				sound: new Howl({
+				  src: ['assets/sounds/veil2.mp3']
+				})
+			},
+			d: {
+				color: "#01da39",
+				sound: new Howl({
+				  src: ['assets/sounds/dotted-spiral.mp3']
+				})
+			},
+			e: {
+				color: "#e88927",
+				sound: new Howl({
+				  src: ['assets/sounds/strike2.mp3']
+				})
+			},
+			f: {
+				color: "#e4cefa",
+				sound: new Howl({
+				  src: ['assets/sounds/flash-2.mp3']
+				})
+			},
+			g: {
+				color: "#415835",
+				sound: new Howl({
+				  src: ['assets/sounds/flash-3.mp3']
+				})
+			},
+			h: {
+				color: "#e5fe32",
+				sound: new Howl({
+				  src: ['assets/sounds/glimmer.mp3']
+				})
+			},
+			i: {
+				color: "#ddf372",
+				sound: new Howl({
+				  src: ['assets/sounds/moon.mp3']
+				})
+			},
+			j: {
+				color: "#66de7b",
+				sound: new Howl({
+				  src: ['assets/sounds/pinwheel.mp3']
+				})
+			},
+			k: {
+				color: "#1744ad",
+				sound: new Howl({
+				  src: ['assets/sounds/piston-1.mp3']
+				})
+			},
+			l: {
+				color: "#4bfb47",
+				sound: new Howl({
+				  src: ['assets/sounds/piston-2.mp3']
+				})
+			},
+			m: {
+				color: "#d3f7b0",
+				sound: new Howl({
+				  src: ['assets/sounds/piston-3.mp3']
+				})
+			},
+			n: {
+				color: "#6c8f65",
+				sound: new Howl({
+				  src: ['assets/sounds/prism-1.mp3']
+				})
+			},
+			o: {
+				color: "#f048b5",
+				sound: new Howl({
+				  src: ['assets/sounds/dotted-spiral2.mp3']
+				})
+			},
+			p: {
+				color: "#40e134",
+				sound: new Howl({
+				  src: ['assets/sounds/prism-3.mp3']
+				})
+			},
+			q: {
+				color: "#314745",
+				sound: new Howl({
+				  src: ['assets/sounds/splits.mp3']
+				})
+			},
+			r: {
+				color: "#130366",
+				sound: new Howl({
+				  src: ['assets/sounds/timer2.mp3']
+				})
+			},
+			s: {
+				color: "#1daf10",
+				sound: new Howl({
+				  src: ['assets/sounds/strike.mp3']
+				})
+			},
+			t: {
+				color: "#22f1eb",
+				sound: new Howl({
+				  src: ['assets/sounds/suspension2.mp3']
+				})
+			},
+			u: {
+				color: "#663d41",
+				sound: new Howl({
+				  src: ['assets/sounds/zig-zag2.mp3']
+				})
+			},
+			v: {
+				color: "#1bd952",
+				sound: new Howl({
+				  src: ['assets/sounds/prism-32.mp3']
+				})
+			},
+			w: {
+				color: "#488c58",
+				sound: new Howl({
+				  src: ['assets/sounds/veil.mp3']
+				})
+			},
+			x: {
+				color: "#935c36",
+				sound: new Howl({
+				  src: ['assets/sounds/wipe.mp3']
+				})
+			},
+			y: {
+				color: "#67cdc3",
+				sound: new Howl({
+				  src: ['assets/sounds/zig-zag.mp3']
+				})
+			},
+			z: {
+				color: "#9f24fb",
+				sound: new Howl({
+				  src: ['assets/sounds/confetti.mp3']
+				})
+			},
+			1: {
+				color: "#f7316f",
+				sound: new Howl({
+				  src: ['assets/sounds/bubbles2.mp3']
+				})
+			},
+			2: {
+				color: "#b1d909",
+				sound: new Howl({
+				  src: ['assets/sounds/clay2.mp3']
+				})
+			},
+			3: {
+				color: "#35e2db",
+				sound: new Howl({
+				  src: ['assets/sounds/ufo2.mp3']
+				})
+			},
+			4: {
+				color: "#bd678a",
+				sound: new Howl({
+				  src: ['assets/sounds/dotted-spiral2.mp3']
+				})
+			},
+			5: {
+				color: "#21e476",
+				sound: new Howl({
+				  src: ['assets/sounds/flash-12.mp3']
+				})
+			},
+			6: {
+				color: "#f0713b",
+				sound: new Howl({
+				  src: ['assets/sounds/flash-22.mp3']
+				})
+			},
+			7: {
+				color: "#dc2c9d",
+				sound: new Howl({
+				  src: ['assets/sounds/flash-32.mp3']
+				})
+			},
+			8: {
+				color: "#3896af",
+				sound: new Howl({
+				  src: ['assets/sounds/prism-22.mp3']
+				})
+			},
+			9: {
+				color: "#dc435b",
+				sound: new Howl({
+				  src: ['assets/sounds/moon2.mp3']
+				})
+			},
+			0: {
+				color: "#7e4180",
+				sound: new Howl({
+				  src: ['assets/sounds/pinwheel2.mp3']
+				})
+			}
+		}
+
+		function onKeyDown(event) {
+			//Exit if unsupported key pressed
+			if (!keyData[event.key]) {
+				return
+			}
+			//Find the maximum point on the screen
+			var maxPoint = new Point(view.size.width, view.size.height);
+			//Generate a random point upto the maximum
+			var randomPoint = Point.random() * maxPoint;
+			//Generate random number of sides to use for the shape between 3 and 8
+			var numberOfSides = Math.round(Math.random() * (8 - 3)) + 3
+			//Create random polygon
+			var newShape = new Path.RegularPolygon(randomPoint, numberOfSides, 500);
+			newShape.fillColor = keyData[event.key].color;
+			//Play sound
+			keyData[event.key].sound.play();
+			//Add shape to array
+			shapes.push(newShape);
+		}
+
+		function onFrame(event) {
+			for (var i=0; i<shapes.length; i++) {
+				//Each frame change the color of the shape slightly
+				shapes[i].fillColor.hue += 1;
+				//Each frame shrink the shape slightly
+				shapes[i].scale(.9);
+
+				//Remove the circle from the screen and the array when it gets too small
+				if (shapes[i].area < 1) {
+					//Remove from the canvas
+					shapes[i].remove();
+					//Remove from the array
+					shapes.splice(i, 1);
+					//Decrement i so we don't skip a circle
+					i--;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
+
+
+
+
+<!-- 
+THE SOUNDS USED ARE FROM:
+
+Neuronal Synchrony
+A collection of two dimensional animations that are triggered by sound.
+(c) 2012 - 2013 jonobr1. Freely distributed under the MIT License.
+Prototyped with Processing, built with JavaScript.
+
+https://github.com/jonobr1/Neuronal-Synchrony
+
+_______________________________________________________________________________
+
+THE ANIMATIONS USED:
+
+Paper.js
+Paper.js is distributed under the permissive MIT License:
+
+Copyright (c) 2011, Juerg Lehni & Jonathan Puckey
+http://lehni.org/ & http://jonathanpuckey.com/
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+http://paperjs.org/
+
+_______________________________________________________________________________
+
+THE SOUND PLAYBACK IS FROM:
+
+Howler.js
+
+Copyright (c) 2013-2018 James Simpson and GoldFire Studios, Inc.
+Released under the MIT License.
+
+https://github.com/goldfire/howler.js
+-->
