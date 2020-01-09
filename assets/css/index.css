@@ -243,6 +243,7 @@ input[type=submit]:hover {
 	max-width: 100px;
 	width: auto;
 	height: auto;
+	padding: 8px;
 }
 
 #title {
